@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        /*if (i % 5 == 0 && i % 7 == 0) {
+          //console.log(i);
+          document.write('<p style="color:red">' + i + "</p>");
+        }*/
+        if (i % 5 == 0 && i % 7 != 0) {
+          //5의 배수와 7의 배수가 아닌것
+          document.write('<p style="color:red">' + i + "</p>");
+        } else if (i % 5 != 0 && i % 7 == 0) {
+          //5와 7의 배수
+          document.write('<p style="color:blue">' + i + "</p>");
+        } else if (i % 5 == 0 && i % 7 == 0) {
+          //5와 7의 배수인것
+          document.write('<p style="color:green">' + i + "</p>");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

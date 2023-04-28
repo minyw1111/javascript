@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //CharAt();문자열에 지정된 인덱스(위치)에 있는 문자 변환
+        let x = "Hello";
+        let y = x.charAt(1);
+        console.log(y);
+        //let z = x.concat(y);//두 문자 열을 연결
+        //let z = x.indexOf("hello");//문자열에서 값이 처음 나타나는 위치 반환 값이 없으면 -1 반환/대소문자 구분한다
+        //let z = x.indexOf("l");
+        //let z = x.lastIndexOf("l")//문자열에서 지정된 값이 마지막으로 나타나는 인덱스(위치)반환 값이 없으면 -1 반환/대소문자 구분한다
+        //let z = x.length;속성은 함수가 얼마나 많은 인수를 기대하는지 나타냅니다
+        //let z = x.padStart(6, "a");//지정된 길이가 될 때까지 지정된 문자열로 채워줌
+        //let z = x.padEnd(10,"a");//Helloaaaaa
+        //let z = x.repeat(3);//지정된값으로 문자를 반복한다
+        //let z = x.replace("hello", "world");//대소문자 구분함
+         //let z = x.search("h");//해당값을 인덱스 번호로 돌려줌
+         //let z = x.slice(1);//End번호를 포함시키지않은 그 문자열 직전까지 반환/일부분 추출/양의 값은 지정된 문자열의 앞에서부터(0)으로 시작
+         //let z = x.slice(-1,-2);//음의 값은 지정된 문자열의 끝(1)에서부터 시작
+         //-1은 include -2는 exclude
+        // let str = "aaa bb cc ddd";
+        // let z = str.split(" ");//지정된 문자로 분할-->새 배열로 반환
+         let str = "aaa bb cc ddd";
+         let z = str.split(",");//문자열을 일정한 구분자로 잘라서 배열로 저장
+         //let strl = z.join("*");// 모든 배열 요소를 문자열로 조인합니다.
+        //let z = pop();//마지막 요소를 없앤다
+        //z.push("new");//새로운 요소를 끝에추가
+        //z.shift();//제일 첫번쨰 요소를 제거하고 그 다음요소를 나타내줌/배열의 첫 번째 요소를 제거하고 다른 요소를 왼쪽으로 "이동"합니다.
+        //z.unshift("new");//배열의 시작 부분에 새 요소를 추가합니다.
+        //z.splice(1,0,"new");//삭제x/배열에 새 항목을 추가하는데 사용할 수 있습니다
+       // z.splice(1,1,"new","add");
+       let str2 = z.slice(2);//cc ddd
+       let str3 = z.slice(1,2);//bb
+       let str4 = str2.concat(str3);
+       str4.sort().reverse();
+       let txt = "hello world";
+       //let txt1 = txt.substr(0);//지정된 인덱스 번호에서 지정된 값(개수)로 문자열을 추출
+       //let txt1 = txt.substr(-3,2);//끝에서부터는 시작의 위치를 알려줌
+       //(x,y)//y는 개수를 나타내줌
+       //let txt1 = txt.substring(0);
+       //let txt1 = txt.substring(0,3)//0에서 3까지의 값을 추출
+       //let txt1 = txt.substring(-1)//start가 0보다 작으면 인덱스가 0부터 시작/음의 값이 적용이 되지않음
+       //let txt1 = txt.toLocaleLowerCase()//다 소문자로 바꾼다
+       //let txt1 = txt.toLocaleUpperCase()//다 대문자로 바꾼다
+        let t = "     Hello world            ";
+        let txt1 = t.trim();//공백을 없애줌
+        document.write(t);
+        console.log(txt1);
+    </script>
+</head>
+<body>
+    <pre><p id="demo1"></p></pre>
+    <pre><p id="demo2"></p></pre>
+    <script>
+        let t = "          Hello world               ";
+        //let result = t.trim();
+        //let result = t.trimStart();
+        let result = t.trimEnd();
+        document.getElementById("demo1").innerHTML = t;
+        document.getElementById("demo2").innerHTML = result;
+
+    </script>
+</body>
+</html>
